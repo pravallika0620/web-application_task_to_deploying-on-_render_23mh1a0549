@@ -1,11 +1,14 @@
-
 const button = document.getElementById('action-btn');
 const statusText = document.getElementById('status');
 
 button.addEventListener('click', function() {
+    statusText.textContent = "System Online";
+    statusText.className = "online";
+   
+    button.textContent = "System Active";
+    button.style.backgroundColor = "#2ecc71";
+    button.disabled = true;
+    button.style.cursor = "default";
     
-    statusText.innerHTML = "The status is currently: <b style='color:green;'>Online!</b>";
-    
-    button.textContent = "Task Complete";
-    button.style.backgroundColor = "#4caf50";
+    console.log("Dashboard has been initialized successfully!");
 });
